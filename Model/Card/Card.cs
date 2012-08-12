@@ -1,5 +1,5 @@
 ﻿
-namespace CardGameFramework
+namespace CardGameFramework.Model.Card
 {
     /// <summary>
     /// Card suit values
@@ -14,11 +14,22 @@ namespace CardGameFramework
     /// </summary>
     public enum FaceValue
     {
-        Two = 2, Three = 3, Four = 4, Five = 5, Six = 6, Seven = 7, Eight = 8,
-        Nine = 9, Ten = 10, Jack = 11, Queen = 12, King = 13, Ace = 14
+        Two = 2,
+        Three = 3,
+        Four = 4,
+        Five = 5,
+        Six = 6,
+        Seven = 7,
+        Eight = 8,
+        Nine = 9,
+        Ten = 10,
+        Jack = 11,
+        Queen = 12,
+        King = 13,
+        Ace = 14
     }
 
-    public class Card
+    public class Card: BaseCard
     {
         // Objects for card information
         private readonly Suit suit;
@@ -35,7 +46,7 @@ namespace CardGameFramework
         /// <param name="suit"></param>
         /// <param name="faceVal"></param>
         /// <param name="isCardUp"></param>
-        public Card(Suit suit, FaceValue faceVal, bool isCardUp)
+        public Card(Suit suit, FaceValue faceVal, bool isCardUp):base()
         {
             this.suit = suit;
             this.faceVal = faceVal;
