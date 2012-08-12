@@ -5,7 +5,12 @@ using System.Text;
 
 namespace CardGameFramework.Model.Card
 {
-    class BaseCard : IEquatable<BaseCard>
+    public class BaseCard : IEquatable<BaseCard>
     {
+
+        public bool Equals(BaseCard other)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

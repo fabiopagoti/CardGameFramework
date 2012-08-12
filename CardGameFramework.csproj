@@ -53,9 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Card.cs" />
-    <Compile Include="Model\Deck.cs" />
-    <Compile Include="Model\Hand.cs" />
+    <Compile Include="Model\Card\BaseCard.cs" />
+    <Compile Include="Model\Card\Card.cs" />
+    <Compile Include="Model\Deck\Deck.cs" />
+    <Compile Include="Model\Deck\Hand.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +138,7 @@
     <Content Include="Resources\Cards\spj.gif" />
     <Content Include="Resources\Cards\spk.gif" />
     <Content Include="Resources\Cards\spq.gif" />
+    <None Include="README.md" />
     <None Include="Resources\BorderPlaceYourBetBottom.gif" />
     <None Include="Resources\BorderPlaceYourBetTop.gif" />
     <None Include="Resources\Background.jpg" />
@@ -182,6 +184,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\Player\" />
+    <Folder Include="Test\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
 </Project>

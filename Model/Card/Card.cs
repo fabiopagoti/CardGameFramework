@@ -1,5 +1,6 @@
 ﻿
 namespace CardGameFramework.Model.Card
+ 
 {
     /// <summary>
     /// Card suit values
@@ -14,6 +15,7 @@ namespace CardGameFramework.Model.Card
     /// </summary>
     public enum FaceValue
     {
+        Ace = 1,
         Two = 2,
         Three = 3,
         Four = 4,
@@ -26,7 +28,6 @@ namespace CardGameFramework.Model.Card
         Jack = 11,
         Queen = 12,
         King = 13,
-        Ace = 14
     }
 
     public class Card: BaseCard
