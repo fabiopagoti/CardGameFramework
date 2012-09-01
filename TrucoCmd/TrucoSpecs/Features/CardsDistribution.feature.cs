@@ -20,6 +20,7 @@ namespace TrucoSpecs.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("CardsDistribution")]
+    [NUnit.Framework.CategoryAttribute("dealer")]
     public partial class CardsDistributionFeature
     {
         
@@ -33,7 +34,8 @@ namespace TrucoSpecs.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CardsDistribution", "In order to play Truco\r\nAs a player\r\nI want to be able to distribute the right nu" +
-                    "mber of cards for each player before each round", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "mber of cards for each player before each round", ProgrammingLanguage.CSharp, new string[] {
+                        "dealer"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -67,18 +69,16 @@ namespace TrucoSpecs.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Distribute 3 cards to each layer")]
-        [NUnit.Framework.CategoryAttribute("dealer")]
         public virtual void Distribute3CardsToEachLayer()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Distribute 3 cards to each layer", new string[] {
-                        "dealer"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Distribute 3 cards to each layer", ((string[])(null)));
 #line 8
- testRunner.Given("I have a deck of truco cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 9
- testRunner.When("I distribute cards to each player", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have a deck of truco cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
+ testRunner.When("I distribute cards to each player", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
  testRunner.Then("all players should have 3 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -86,19 +86,17 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Show trump card")]
-        [NUnit.Framework.CategoryAttribute("dealer")]
         public virtual void ShowTrumpCard()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show trump card", new string[] {
-                        "dealer"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show trump card", ((string[])(null)));
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 14
-testRunner.Given("all players have 3 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("all players have 3 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
-testRunner.When("I show trump card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I show trump card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
-testRunner.Then("trump card should be shown for all players", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("trump card should be shown for all players", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

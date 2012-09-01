@@ -1,19 +1,19 @@
-﻿Feature: CardsDistribution
+﻿@dealer
+Feature: CardsDistribution
 	In order to play Truco
 	As a player
 	I want to be able to distribute the right number of cards for each player before each round
 
-@dealer
+
 Scenario: Distribute 3 cards to each layer
 	Given I have a deck of truco cards
 	When I distribute cards to each player
 	Then all players should have 3 cards
 
-@dealer
 Scenario: Show trump card
-Given all players have 3 cards
-When I show trump card
-Then trump card should be shown for all players
+	Given all players have 3 cards
+	When I show trump card
+	Then trump card should be shown for all players
 
 @cut
 Scenario: Give deck to foot cut

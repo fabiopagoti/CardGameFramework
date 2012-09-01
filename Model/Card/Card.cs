@@ -35,11 +35,10 @@ namespace CardGameFramework.Model.Card
         // Objects for card information
         private readonly Suit suit;
         private readonly FaceValue faceVal;
-        private bool isCardUp;
+        //private bool isCardUp;
 
         public Suit Suit { get { return suit; } }
         public FaceValue FaceVal { get { return faceVal; } }
-        public bool IsCardUp { get { return isCardUp; } set { isCardUp = value; } }
 
         /// <summary>
         /// Constructor for a new card.  Assign the card a suit, face value, and if the card is facing up or down
@@ -47,11 +46,10 @@ namespace CardGameFramework.Model.Card
         /// <param name="suit"></param>
         /// <param name="faceVal"></param>
         /// <param name="isCardUp"></param>
-        public Card(Suit suit, FaceValue faceVal, bool isCardUp):base()
+        public Card(Suit suit, FaceValue faceVal):base()
         {
             this.suit = suit;
-            this.faceVal = faceVal;
-            this.isCardUp = isCardUp;
+            this.faceVal = faceVal;          
         }
 
         /// <summary>
@@ -60,7 +58,7 @@ namespace CardGameFramework.Model.Card
         /// <returns></returns>
         public override string ToString()
         {
-            return "The" + faceVal.ToString() + "of" + suit.ToString();
+            return "The " + faceVal.ToString() + " of " + suit.ToString();
         }
     }
 }

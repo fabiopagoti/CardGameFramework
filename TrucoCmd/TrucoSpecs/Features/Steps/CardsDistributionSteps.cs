@@ -1,5 +1,6 @@
 ﻿using CardGameFramework.Model.Card;
 using CardGameFramework.Model.Deck;
+using CardGameFramework.Model.Player;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
@@ -25,7 +26,7 @@ namespace TrucoSpecs.Features.Steps
         public void GivenAllPlayersHaveCards(int p0)
         {
             dealer = new Dealer();
-            dealer.distributeCards(trucoPlayers);
+            dealer.DistributeCards(new TrucoGame(), trucoPlayers);
         }
 
 
@@ -38,13 +39,13 @@ namespace TrucoSpecs.Features.Steps
         {
             Dealer dealer = new Dealer();
             trucoPlayers = new System.Collections.Generic.List<Player>();
-            dealer.distributeCards(trucoPlayers);
+            dealer.DistributeCards(new TrucoGame(), trucoPlayers);
         }
 
         [When(@"I show trump card")]
         public void WhenIShowTurnCar()
         {
-            dealer.showTrumpCard(deck);
+            trump = dealer.showTrumpCard(deck);
         }
 
         [When(@"I finish shuffling the deck")]
@@ -83,18 +84,5 @@ namespace TrucoSpecs.Features.Steps
         }
 
         #endregion
-    }
-
-    public class Dealer
-    {
-        public void distributeCards(System.Collections.Generic.ICollection<Player> trucoPlayers)
-        {
-            //throw new System.NotImplementedException();
-        }
-
-        public Card showTrumpCard(Deck deck)
-        {
-            return new Card(Suit.Clubs, FaceValue.Ace);
-        }
     }
 }
