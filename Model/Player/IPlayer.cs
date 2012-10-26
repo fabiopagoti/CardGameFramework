@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CardGameFramework.Model.Deck
+namespace CardGameFramework.Model.Player
 {
-    public interface IDeck
+    public interface IPlayer
     {
-
-
     }
 }

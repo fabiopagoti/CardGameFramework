@@ -4,7 +4,7 @@ using CardGameFramework.Model.Card;
 
 namespace CardGameFramework.Model.Deck
 {
-    public class Deck
+    public class Deck : IDeck
     {
         // Creates a list of cards
         protected List<Card.Card> cards = new List<Card.Card>();
