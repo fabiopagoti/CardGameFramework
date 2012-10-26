@@ -43,8 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TrucoPlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrucoGame.cs" />
+    <Compile Include="TrucoTeam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardGameFramework.csproj">
+      <Project>{8210C7FC-0164-4A3E-B041-DBFF8134E0AD}</Project>
+      <Name>CardGameFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,6 +9,7 @@ namespace TrucoCmd
     {
         static void Main(string[] args)
         {
+            TrucoGame game = new TrucoGame(4);
         }
     }
 }
