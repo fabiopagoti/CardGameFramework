@@ -57,6 +57,13 @@
     <Compile Include="Model\Card\Card.cs" />
     <Compile Include="Model\Deck\Deck.cs" />
     <Compile Include="Model\Deck\Hand.cs" />
+    <Compile Include="Model\Deck\IDeck.cs" />
+    <Compile Include="Model\Game\CardGame.cs" />
+    <Compile Include="Model\Game\ICardGame.cs" />
+    <Compile Include="Model\Player\Dealer.cs" />
+    <Compile Include="Model\Player\IDealer.cs" />
+    <Compile Include="Model\Player\IPlayer.cs" />
+    <Compile Include="Model\Player\Player.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,9 +191,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Player\" />
-    <Folder Include="Test\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
 </Project>
