@@ -9,7 +9,34 @@ namespace TrucoCmd
     {
         static void Main(string[] args)
         {
-            TrucoGame game = new TrucoGame(4);
+            WriteWelcome();
+
+            while (true)
+            {
+                WriteMenu();
+                ReadOption();
+            }
+            
+        }
+
+        private static void ReadOption()
+        {
+            ConsoleKeyInfo option = Console.ReadKey();
+            if (option.Key != ConsoleKey.Escape)
+            {
+                TrucoGame game = new TrucoGame(4);
+                game.StartGame();
+            }
+        }
+
+        private static void WriteWelcome()
+        {
+            Console.WriteLine("Welcome to Truco");
+        }
+
+        private static void WriteMenu()
+        {
+            Console.Write("Press any key to start a new Game");
         }
     }
 }
