@@ -16,7 +16,7 @@ namespace CardWritter
             {
                 suit = InputSuit(suit);
                 faceValue = InputFaceValue(faceValue);
-                card = new Card((Suit) suit, (FaceValue) faceValue, true);
+                card = new Card((Suit) suit, (FaceValue) faceValue);
                 PrintCard(card);
                 GameIntro();
             }
