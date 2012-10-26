@@ -4,7 +4,6 @@ Feature: CardsDistribution
 	As a player
 	I want to be able to distribute the right number of cards for each player before each round
 
-
 Scenario: Distribute 3 cards to each layer
 	Given I have a deck of truco cards
 	When I distribute cards to each player

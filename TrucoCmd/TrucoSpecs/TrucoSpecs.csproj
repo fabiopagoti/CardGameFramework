@@ -55,25 +55,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CardsDistribution.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\GameInitialization.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameInitialization.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\ManilhaDefinition.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ManilhaDefinition.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Steps\CardsDistributionSteps.cs" />
+    <Compile Include="Features\Steps\GameInitializationSteps.cs" />
     <Compile Include="Features\TrucoTurn.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrucoTurn.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrucoGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\CardsDistribution.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CardsDistribution.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GameInitialization.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GameInitialization.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\ManilhaDefinition.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -89,6 +98,10 @@
     <ProjectReference Include="..\..\CardGameFramework.csproj">
       <Project>{8210C7FC-0164-4A3E-B041-DBFF8134E0AD}</Project>
       <Name>CardGameFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrucoCmd.csproj">
+      <Project>{C06B65B6-FCB4-47F0-90BA-12AC42EE88AA}</Project>
+      <Name>TrucoCmd</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

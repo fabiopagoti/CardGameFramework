@@ -72,13 +72,13 @@ namespace TrucoSpecs.Features
         public virtual void Distribute3CardsToEachLayer()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Distribute 3 cards to each layer", ((string[])(null)));
-#line 8
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 8
  testRunner.Given("I have a deck of truco cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
+#line 9
  testRunner.When("I distribute cards to each player", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
+#line 10
  testRunner.Then("all players should have 3 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -89,13 +89,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ShowTrumpCard()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show trump card", ((string[])(null)));
-#line 13
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 13
  testRunner.Given("all players have 3 cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
+#line 14
  testRunner.When("I show trump card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 15
  testRunner.Then("trump card should be shown for all players", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -108,15 +108,15 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Give deck to foot cut", new string[] {
                         "cut"});
-#line 19
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 20
+#line 19
  testRunner.Given("it is my time to distribute cards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
+#line 20
  testRunner.When("I finish shuffling the deck", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 21
  testRunner.Then("Foot play should slice it", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 23
+#line 22
  testRunner.And("determ if card distribution is up or down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,17 +1,19 @@
-﻿using CardGameFramework.Model.Card;
+﻿using System.Collections.Generic;
+using CardGameFramework.Model.Card;
 using CardGameFramework.Model.Deck;
 using CardGameFramework.Model.Player;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
+using TrucoCmd;
 
 namespace TrucoSpecs.Features.Steps
 {
     [Binding]
     public class CardsDistributionSteps
     {
-        private Deck deck;
+        private IDeck deck;
         private Dealer dealer;
-        private System.Collections.Generic.ICollection<Player> trucoPlayers;
+        private List<TrucoPlayer> trucoPlayers;
         private Card trump;
 
         #region Given
@@ -26,7 +28,7 @@ namespace TrucoSpecs.Features.Steps
         public void GivenAllPlayersHaveCards(int p0)
         {
             dealer = new Dealer();
-            dealer.DistributeCards(new TrucoGame(), trucoPlayers);
+            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
         }
 
 
@@ -38,8 +40,8 @@ namespace TrucoSpecs.Features.Steps
         public void WhenIDistributeCardsToEachPlayer()
         {
             Dealer dealer = new Dealer();
-            trucoPlayers = new System.Collections.Generic.List<Player>();
-            dealer.DistributeCards(new TrucoGame(), trucoPlayers);
+            trucoPlayers = new List<TrucoPlayer>();
+            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
         }
 
         [When(@"I show trump card")]
