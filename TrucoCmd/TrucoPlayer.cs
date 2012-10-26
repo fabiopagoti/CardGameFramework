@@ -7,7 +7,7 @@ namespace TrucoCmd
     public class TrucoPlayer : IPlayer
     {
         protected string name { get; set; }
-        protected Hand hand;
+        private Hand hand;
         private ICollection<TrucoPlayer> partners;
 
     }

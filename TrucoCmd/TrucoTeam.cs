@@ -7,9 +7,9 @@ namespace TrucoCmd
         private string Name;
         public ICollection<TrucoPlayer> players;
 
-        public TrucoTeam(int numberOfPlayers)
+        public TrucoTeam(ICollection<TrucoPlayer> _players )
         {
-            players = new List<TrucoPlayer>(numberOfPlayers);
+            players = _players;
         }
 
     }
