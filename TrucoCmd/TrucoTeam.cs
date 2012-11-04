@@ -12,5 +12,16 @@ namespace TrucoCmd
             players = _players;
         }
 
+        public TrucoPlayer TrucoPlayer
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
     }
 }
