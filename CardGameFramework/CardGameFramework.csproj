@@ -145,7 +145,6 @@
     <Content Include="Resources\Cards\spj.gif" />
     <Content Include="Resources\Cards\spk.gif" />
     <Content Include="Resources\Cards\spq.gif" />
-    <None Include="README.md" />
     <None Include="Resources\BorderPlaceYourBetBottom.gif" />
     <None Include="Resources\BorderPlaceYourBetTop.gif" />
     <None Include="Resources\Background.jpg" />

@@ -95,10 +95,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CardGameFramework.csproj">
-      <Project>{8210C7FC-0164-4A3E-B041-DBFF8134E0AD}</Project>
-      <Name>CardGameFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TrucoCmd.csproj">
       <Project>{C06B65B6-FCB4-47F0-90BA-12AC42EE88AA}</Project>
       <Name>TrucoCmd</Name>
