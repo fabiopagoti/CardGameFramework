@@ -15,7 +15,7 @@ namespace Specs.Features.Steps
             // To use the multiline text or the table argument of the scenario,
             // additional string/Table parameters can be defined on the step definition
             // method. 
-
+            
             ScenarioContext.Current.Pending();
 
         }

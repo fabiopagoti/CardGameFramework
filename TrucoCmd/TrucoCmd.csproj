@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Mocks\FakeTrucoTeam.cs" />
     <Compile Include="TrucoRound.cs" />
+    <Compile Include="TrucoScore.cs" />
     <Compile Include="TrucoTurn.cs" />
     <Compile Include="TrucoPlayer.cs" />
     <Compile Include="Program.cs" />
@@ -55,8 +56,12 @@
   <ItemGroup>
     <None Include="Truco.cd" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Test\" />
+    <ProjectReference Include="..\CardGameFramework\CardGameFramework.csproj">
+      <Project>{8210C7FC-0164-4A3E-B041-DBFF8134E0AD}</Project>
+      <Name>CardGameFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

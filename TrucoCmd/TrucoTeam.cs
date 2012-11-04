@@ -4,24 +4,12 @@ namespace TrucoCmd
 {
     public class TrucoTeam
     {
-        private string Name;
+        public string Name { get; set; }
         public ICollection<TrucoPlayer> players;
 
-        public TrucoTeam(ICollection<TrucoPlayer> _players )
+        public TrucoTeam(ICollection<TrucoPlayer> players)
         {
-            players = _players;
+            this.players = players;
         }
-
-        public TrucoPlayer TrucoPlayer
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
     }
 }
