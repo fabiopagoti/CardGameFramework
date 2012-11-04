@@ -1,3 +1,5 @@
+
+
 namespace TrucoCmd
 {
     public class TrucoScore
@@ -11,5 +13,9 @@ namespace TrucoCmd
             TeamB = teamB;
         }
 
+        public override string ToString()
+        {
+            return string.Format(@"Team A: {0} \r Team B: {1}", TeamA, TeamB);
+        }
     }
 }

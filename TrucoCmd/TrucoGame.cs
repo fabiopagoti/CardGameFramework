@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CardGameFramework.Model.Game;
+﻿using CardGameFramework.Model.Game;
+using TrucoCmd.Mocks;
 
 namespace TrucoCmd
 {
@@ -43,9 +43,7 @@ namespace TrucoCmd
 
         public void StartGame()
         {
-//            Score = new Dictionary<TrucoTeam, int>();
-//            Score.Add(TeamA, 0);
-//            Score.Add(TeamB, 0);
+            Score = FakeTrucoScore.createTrucoScore(0, 0);
         }
 
     }
