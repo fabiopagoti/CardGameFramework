@@ -25,6 +25,7 @@ namespace TrucoCmd
 
         private void CreatePlayers(int _number_of_players)
         {
+<<<<<<< Updated upstream
             teamA = new TrucoTeam(_number_of_players/2);
             teamB = new TrucoTeam(_number_of_players/2);
 
@@ -39,6 +40,22 @@ namespace TrucoCmd
                     teamB.players.Add(new TrucoPlayer());
                 }
             }
+=======
+            TeamA = FakeTrucoTeam.createAnimal2Team();
+            TeamB = FakeTrucoTeam.createPokemon2Team();
+
+//            for (int i = 0; i < _number_of_players; i++)
+//            {
+//                if (i%2 == 0)
+//                {
+//                    TeamA.Players.Add(new TrucoPlayer());
+//                }
+//                else
+//                {
+//                    TeamB.Players.Add(new TrucoPlayer());
+//                }
+//            }
+>>>>>>> Stashed changes
         }
 
         public void StartGame()

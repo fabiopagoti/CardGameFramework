@@ -9,6 +9,15 @@ namespace TrucoCmd
         public string Name { get; set; }
         public Hand Hand { get; set; }
         public ICollection<TrucoPlayer> Partners { get; set; }
+<<<<<<< Updated upstream
   
+=======
+
+        public TrucoPlayer(string name)
+        {
+            Name = name;
+        }
+        
+>>>>>>> Stashed changes
     }
 }

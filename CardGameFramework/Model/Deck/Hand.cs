@@ -27,6 +27,18 @@ namespace CardGameFramework.Model.Deck
             }
             return false;
         }
+
+
+        public override string ToString()
+        {
+            string handString = "";
+            foreach (Card.Card card in Cards)
+            {
+                handString = string.Concat(handString, string.Concat(card.ToString(), ","));
+
+            }
+            return handString;
+        }
     }
 
     /// <summary>
