@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Compile Include="Mocks\FakeTrucoTeam.cs" />
-=======
     <Compile Include="Mocks\FakeHand.cs" />
     <Compile Include="Mocks\FakeTrucoGame.cs" />
     <Compile Include="Mocks\FakeTrucoPlayer.cs" />
@@ -53,7 +51,6 @@
     <Compile Include="Mocks\FakeTrucoTeam.cs" />
     <Compile Include="Mocks\FakeTrucoTurn.cs" />
     <Compile Include="TrucoDeck.cs" />
->>>>>>> Stashed changes
     <Compile Include="TrucoRound.cs" />
     <Compile Include="TrucoTurn.cs" />
     <Compile Include="TrucoPlayer.cs" />
