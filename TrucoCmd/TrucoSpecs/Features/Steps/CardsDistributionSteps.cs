@@ -27,8 +27,10 @@ namespace TrucoSpecs.Features.Steps
         [Given(@"all players have (.*) cards")]
         public void GivenAllPlayersHaveCards(int p0)
         {
-            dealer = new Dealer();
-            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
+
+            ScenarioContext.Current.Pending(); 
+//            dealer = new Dealer();
+//            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
         }
 
 
@@ -39,15 +41,16 @@ namespace TrucoSpecs.Features.Steps
         [When(@"I distribute cards to each player")]
         public void WhenIDistributeCardsToEachPlayer()
         {
-            Dealer dealer = new Dealer();
-            trucoPlayers = new List<TrucoPlayer>();
-            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
+//            Dealer dealer = new Dealer();
+//            trucoPlayers = new List<TrucoPlayer>();
+//            dealer.DistributeCards(new TrucoGame(), deck, trucoPlayers);
         }
 
         [When(@"I show trump card")]
         public void WhenIShowTurnCar()
         {
-            trump = dealer.showTrumpCard(deck);
+            ScenarioContext.Current.Pending();
+//            trump = dealer.showTrumpCard(deck);
         }
 
         [When(@"I finish shuffling the deck")]
@@ -63,14 +66,16 @@ namespace TrucoSpecs.Features.Steps
         [Then(@"all players should have (.*) cards")]
         public void ThenAllPlayersShouldHaveCards(int numberOfCards)
         {
-            Assert.AreEqual(Player.numberOfCardsWithEachPlayer(trucoPlayers), numberOfCards);
+            ScenarioContext.Current.Pending();
+//            Assert.AreEqual(Player.numberOfCardsWithEachPlayer(trucoPlayers), numberOfCards);
         }
 
         [Then(@"trump card should be shown for all players")]
         public void ThenOneCardShouldBeShownForAllPlayers()
         {
+            ScenarioContext.Current.Pending();
             deck = new Deck();
-            Assert.IsTrue(deck.isCardVisible(trump));
+//            Assert.IsTrue(deck.isCardVisible(trump));
         }
 
         [Then(@"Foot play should slice it")]
