@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameFramework", "CardGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameFrameworkSpecs", "CardGameFramework\CardGameFrameworkSpecs\CardGameFrameworkSpecs.csproj", "{2DFC6887-0004-4D3D-B880-FFCE631E51F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardWritter", "CardWritter\CardWritter.csproj", "{F7038F60-FDA6-4A58-9795-D93A773877CC}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = CardGameFramework.vsmdi
@@ -69,6 +71,16 @@ Global
 		{2DFC6887-0004-4D3D-B880-FFCE631E51F8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2DFC6887-0004-4D3D-B880-FFCE631E51F8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2DFC6887-0004-4D3D-B880-FFCE631E51F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Debug|x86.ActiveCfg = Debug|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Debug|x86.Build.0 = Debug|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Release|Any CPU.ActiveCfg = Release|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Release|x86.ActiveCfg = Release|x86
+		{F7038F60-FDA6-4A58-9795-D93A773877CC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

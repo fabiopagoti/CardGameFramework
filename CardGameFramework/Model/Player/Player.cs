@@ -8,5 +8,6 @@ namespace CardGameFramework.Model.Player
         {
             return 0;
         }
+
     }
 }

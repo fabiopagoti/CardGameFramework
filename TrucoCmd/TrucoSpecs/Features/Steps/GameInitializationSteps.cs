@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using CardGameFramework.Model.Player;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
+using TrucoCmd;
 
 namespace TrucoSpecs.Features.Steps
 {
     [Binding]
     public class GameInitializationSteps
     {
-        private List<Player> trucoPlayers;
+        private List<TrucoPlayer> trucoPlayers;
+        private TrucoGame trucoGame;
 
         [Given(@"There are \[(.*)] players")]
         public void GivenThereArePlayers(int numberOfPlayers)
@@ -30,7 +33,7 @@ namespace TrucoSpecs.Features.Steps
         [When(@"Truco game starts")]
         public void WhenTrucoGameStarts()
         {
-            ScenarioContext.Current.Pending();
+            trucoGame = new TrucoGame(trucoPlayers.Count);
         }
         
         [When(@"a round starts")]
@@ -42,13 +45,21 @@ namespace TrucoSpecs.Features.Steps
         [Then(@"players should have their partners")]
         public void ThenPlayersShouldHaveTheirPartners()
         {
-            ScenarioContext.Current.Pending();
+            ICollection<TrucoPlayer> partners;
+            foreach (var trucoPlayer in trucoPlayers)
+            {
+                partners = trucoPlayer.Partners;
+                Assert.NotNull(partners);
+            }
         }
         
         [Then(@"score should be reset")]
         public void ThenScoreShouldBeReset()
         {
-            ScenarioContext.Current.Pending();
+            Score score;
+            score = trucoGame.Score();
+            Assert.Equals(score.TeamA, 0);
+            Assert.Equals(score.TeamB, 0);
         }
     }
 }

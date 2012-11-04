@@ -32,8 +32,8 @@ namespace TrucoSpecs.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GameInitialization", "In order to star a truco game\r\nAs a truco player\r\nI want to have all my opponents" +
-                    " prepared and score reset", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GameInitialization", "In order to start a truco game\r\nAs a truco player\r\nI want to have all teams ready" +
+                    " and score reseted", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

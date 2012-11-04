@@ -6,9 +6,9 @@ namespace TrucoCmd
 {
     public class TrucoPlayer : IPlayer
     {
-        protected string name { get; set; }
-        private Hand hand;
-        private ICollection<TrucoPlayer> partners;
-
+        public string Name { get; set; }
+        public Hand Hand { get; set; }
+        public ICollection<TrucoPlayer> Partners { get; set; }
+  
     }
 }

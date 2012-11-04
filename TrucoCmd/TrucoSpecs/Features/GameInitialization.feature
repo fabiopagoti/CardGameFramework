@@ -1,7 +1,7 @@
 ﻿Feature: GameInitialization
-	In order to star a truco game
+	In order to start a truco game
 	As a truco player
-	I want to have all my opponents prepared and score reset
+	I want to have all teams ready and score reseted
 
 @game
 Scenario: StartGame
