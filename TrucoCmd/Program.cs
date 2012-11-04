@@ -1,20 +1,13 @@
 ﻿using System;
-<<<<<<< Updated upstream
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-=======
 using CardGameFramework.Mocks;
 using CardGameFramework.Model.Card;
->>>>>>> Stashed changes
+
 
 namespace TrucoCmd
 {
     internal class Program
     {
-<<<<<<< Updated upstream
-        static void Main(string[] args)
-=======
+
         private static TrucoGame game = Mocks.FakeTrucoGame.createTrucoGame4Players();
         
         // settings
@@ -23,7 +16,7 @@ namespace TrucoCmd
 
         // end of settings
         private static void Main(string[] args)
->>>>>>> Stashed changes
+
         {
             WriteWelcome();
             WriteMenu();
@@ -48,13 +41,6 @@ namespace TrucoCmd
         {
             switch (option.Key)
             {
-<<<<<<< Updated upstream
-                TrucoGame game = new TrucoGame(4);
-                game.StartGame();
-            }
-        }
-
-=======
                 case ConsoleKey.D1:
                     PlayGame();
                     break;
@@ -116,7 +102,7 @@ namespace TrucoCmd
         }
 
 
->>>>>>> Stashed changes
+
         private static void WriteWelcome()
         {
             Console.WriteLine("Welcome to Truco");
@@ -124,15 +110,12 @@ namespace TrucoCmd
 
         private static void WriteMenu()
         {
-<<<<<<< Updated upstream
-            Console.Write("Press any key to start a new Game");
-        }
-=======
             Console.WriteLine("1) Start a new Game\n" +
                               "2) Player Name\n" +
                               "3) Number of Players\n" +
                               "Esq) Quit\n");
         }
+
 
         private static void WriteScore()
         {
@@ -181,7 +164,5 @@ namespace TrucoCmd
 
         }
 
-
->>>>>>> Stashed changes
     }
 }

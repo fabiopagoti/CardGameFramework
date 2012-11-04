@@ -24,5 +24,6 @@ namespace TrucoCmd
             TeamB += NumberOFPointsTeamB;
             return this;
         }
+
     }
 }
