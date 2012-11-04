@@ -21,4 +21,4 @@ Scenario: Give deck to foot cut
 	Then Foot play should slice it
 	And determ if card distribution is up or down
 
-
+	
