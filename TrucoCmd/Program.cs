@@ -7,9 +7,8 @@ namespace TrucoCmd
 {
     internal class Program
     {
-        
         private static TrucoGame game = Mocks.FakeTrucoGame.createTrucoGame4Players();
-        
+
         // settings
         private static string PlayerName = string.Empty;
         private static int NumberOfPlayers;
@@ -51,7 +50,7 @@ namespace TrucoCmd
                     NumberOfPlayers = ConfigureNumberOfPlayers();
                     break;
                 case ConsoleKey.Q:
-                    
+
                     break;
             }
         }
@@ -98,15 +97,14 @@ namespace TrucoCmd
         }
 
 
-
         private static void WriteWelcome()
         {
-            Console.WriteLine("Welcome to Truco");
+            Console.WriteLine("\nWelcome to Truco\n");
         }
 
         private static void WriteMenu()
         {
-            Console.WriteLine("1) Start a new Game\n" +
+            Console.WriteLine("\n1) Start a new Game\n" +
                               "2) Player Name\n" +
                               "3) Number of Players\n" +
                               "Esq) Quit\n");
@@ -134,31 +132,26 @@ namespace TrucoCmd
 
         private static string ConfigurePlayerName()
         {
-            Console.WriteLine("What is your name?");
+            Console.WriteLine("\nWhat is your name?");
             return Console.ReadLine();
         }
 
         private static int ConfigureNumberOfPlayers()
         {
-            Console.WriteLine("What in 4 or 6 players?");
+            Console.WriteLine("\nWhat in 4 or 6 players?");
             ConsoleKeyInfo inputNumberOfPlayers = Console.ReadKey();
-            while (!inputNumberOfPlayers.Equals(ConsoleKey.D4) && 
-                   !inputNumberOfPlayers.Equals(ConsoleKey.D6))
+            while (!inputNumberOfPlayers.Key.Equals(ConsoleKey.D4)  &&
+                   !inputNumberOfPlayers.Key.Equals(ConsoleKey.D6))
             {
-            Console.WriteLine("What in 4 or 6 players?");
-            inputNumberOfPlayers = Console.ReadKey();
+                Console.WriteLine("\nWhat in 4 or 6 players?");
+                inputNumberOfPlayers = Console.ReadKey();
             }
+
             if (inputNumberOfPlayers.Equals(ConsoleKey.D4))
             {
                 return 4;
             }
-            else
-            {
-                return 6;
-            }
-           
-
+            return 6;
         }
-
     }
 }
