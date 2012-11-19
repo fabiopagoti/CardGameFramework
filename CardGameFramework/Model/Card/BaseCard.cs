@@ -2,10 +2,9 @@
 
 namespace CardGameFramework.Model.Card
 {
-    public class BaseCard : IEquatable<BaseCard>
+    public class BaseCard : ICard
     {
-
-        public bool Equals(BaseCard other)
+        public bool Equals(ICard other)
         {
             throw new NotImplementedException();
         }

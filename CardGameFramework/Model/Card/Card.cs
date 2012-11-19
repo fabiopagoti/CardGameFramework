@@ -30,7 +30,7 @@ namespace CardGameFramework.Model.Card
         King = 13,
     }
 
-    public class Card: BaseCard
+    public class Card: ICard
     {
         // Objects for card information
         private readonly Suit suit;
@@ -59,6 +59,36 @@ namespace CardGameFramework.Model.Card
         public override string ToString()
         {
             return "The " + faceVal.ToString() + " of " + suit.ToString();
+        }
+
+
+        public override bool Equals(System.Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Card c = obj as Card;
+            if ((System.Object)c == null)
+            {
+                return false;
+            }
+            return (Suit == c.Suit) && (FaceVal == c.FaceVal);
+        }
+
+        public bool Equals(Card c)
+        {
+            if ((object)c == null)
+            {
+                return false;
+            }
+            return (Suit == c.Suit) && (FaceVal == c.FaceVal);
+        }
+
+        public override int GetHashCode()
+        {
+            return (int) (FaceVal ^ (FaceValue) Suit);
         }
     }
 }
