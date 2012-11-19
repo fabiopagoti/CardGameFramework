@@ -7,8 +7,11 @@ using CardGameFramework.Model.Deck;
 
 namespace CardGameFramework.Model.Player
 {
-    interface IDealer
+    public interface IDealer
     {
         void DistributeCards(ICardGame cardGame, IDeck deck, ICollection<IPlayer> players);
+
+        void DistributeCardsToSinglePlayer(ICardGame cardGame, IDeck deck, IPlayer player);
+
     }
 }

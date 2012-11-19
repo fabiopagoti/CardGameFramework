@@ -16,8 +16,11 @@ namespace CardGameFramework.Model.Player
         public void DistributeCards(ICardGame cardGame, IDeck deck, ICollection<IPlayer> players)
         {
             
-            // Truco
-            
+        }
+
+        public void DistributeCardsToSinglePlayer(ICardGame cardGame, IDeck deck, IPlayer players)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

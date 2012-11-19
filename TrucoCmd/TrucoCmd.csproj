@@ -48,7 +48,8 @@
     <Compile Include="Mocks\FakeTrucoPlayer.cs" />
     <Compile Include="Mocks\FakeTrucoScore.cs" />
     <Compile Include="Mocks\FakeTrucoTeam.cs" />
-    <Compile Include="Mocks\FakeTrucoTurn.cs" /> 
+    <Compile Include="Mocks\FakeTrucoTurn.cs" />
+    <Compile Include="TrucoDealer.cs" />
     <Compile Include="TrucoDeck.cs" />
     <Compile Include="TrucoRound.cs" />
     <Compile Include="TrucoScore.cs" />
