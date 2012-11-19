@@ -7,7 +7,10 @@ namespace CardGameFramework.Model.Card
     /// </summary>
     public enum Suit
     {
-        Diamonds, Spades, Clubs, Hearts
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
     }
 
     /// <summary>

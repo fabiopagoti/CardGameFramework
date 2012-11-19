@@ -11,17 +11,6 @@ namespace CardGameFrameworkTest
     [TestClass()]
     public class CardTest
     {
-        private TestContext testContextInstance;
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get { return testContextInstance; }
-            set { testContextInstance = value; }
-        }
 
         #region Additional test attributes
 
@@ -55,9 +44,8 @@ namespace CardGameFrameworkTest
 
         #endregion
 
-        /// <summary>
-        ///A test for Equals
-        ///</summary>
+        #region Equals(ICard)
+
         [TestMethod()]
         public void EqualsTestAceClubsNullReturnsFalse()
         {
@@ -104,10 +92,10 @@ namespace CardGameFrameworkTest
             Assert.AreEqual(true, actual);
         }
 
+        #endregion
 
-        /// <summary>
-        ///A test for Equals
-        ///</summary>
+        #region Equals(Obj)
+
         [TestMethod()]
         public void EqualsTestObjAceClubsNullObjectReturnsFalse()
         {
@@ -153,49 +141,42 @@ namespace CardGameFrameworkTest
             Assert.AreEqual(true, actual);
         }
 
+        #endregion
 
-        /// <summary>
-        ///A test for GetHashCode
-        ///</summary>
+        #region GetHashCode
+
         [TestMethod()]
-        public void GetHashCodeTest()
+        public void GetHashCodeAceClubs1ReturnsTrue()
         {
-            Suit suit = new Suit(); // TODO: Initialize to an appropriate value
-            FaceValue faceVal = new FaceValue(); // TODO: Initialize to an appropriate value
-            Card target = new Card(suit, faceVal); // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.GetHashCode();
+            Card target = new Card(Suit.Clubs, FaceValue.Ace);
+            int expected = 1;
+            int actual = target.GetHashCode();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
-        /// <summary>
-        ///A test for ToString
-        ///</summary>
         [TestMethod()]
-        public void ToStringTest()
+        public void GetHashCodeAceClubs14ReturnsTrue()
         {
-            Suit suit = new Suit(); // TODO: Initialize to an appropriate value
-            FaceValue faceVal = new FaceValue(); // TODO: Initialize to an appropriate value
-            Card target = new Card(suit, faceVal); // TODO: Initialize to an appropriate value
-            string expected = string.Empty; // TODO: Initialize to an appropriate value
-            string actual;
-            actual = target.ToString();
+            Card target = new Card(Suit.Spades, FaceValue.King);
+            int expected = 14;
+            int actual = target.GetHashCode();
+            Console.Write(actual);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
-        /// <summary>
-        ///A test for Card Constructor
-        ///</summary>
+        #endregion
+
+        #region ToString
+
         [TestMethod()]
-        public void CardConstructorTest()
+        public void ToStringAce()
         {
-            Suit suit = new Suit(); // TODO: Initialize to an appropriate value
-            FaceValue faceVal = new FaceValue(); // TODO: Initialize to an appropriate value
-            Card target = new Card(suit, faceVal);
-            Assert.Inconclusive("TODO: Implement code to verify target");
+            Card target = new Card(Suit.Clubs, FaceValue.Ace);
+            String actual = target.ToString();
+            Assert.AreEqual("The Ace of Clubs", actual);
         }
+
+        #endregion
+
     }
 }
