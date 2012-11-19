@@ -11,7 +11,6 @@ using System;
 namespace TrucoUnit
 {
 
-
     [TestClass()]
     public class TrucoDealerTest
     {

@@ -56,8 +56,6 @@ namespace TrucoCmd
             }
         }
 
-
-
         private static void PlayGame()
         {
             game.StartGame();
