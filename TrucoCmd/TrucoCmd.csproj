@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mocks\FakeHand.cs" />
+    <Compile Include="Mocks\FakeTrucoDealer.cs" />
+    <Compile Include="Mocks\FakeTrucoDeck.cs" />
     <Compile Include="Mocks\FakeTrucoGame.cs" />
     <Compile Include="Mocks\FakeTrucoPlayer.cs" />
     <Compile Include="Mocks\FakeTrucoScore.cs" />

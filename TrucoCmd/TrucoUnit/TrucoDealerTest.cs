@@ -1,11 +1,14 @@
-﻿using TrucoCmd;
+﻿using CardGameFramework.Model.Card;
+using TrucoCmd;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CardGameFramework.Model.Game;
 using CardGameFramework.Model.Deck;
 using CardGameFramework.Model.Player;
 using System.Collections.Generic;
+using TrucoCmd.Mocks;
+using System;
 
-namespace CardGameFrameworkTest
+namespace TrucoUnit
 {
 
 
@@ -43,15 +46,6 @@ namespace CardGameFrameworkTest
         //
         #endregion
 
-        [TestMethod()]
-        public void DistributeCardsToSinglePlayerTest()
-        {
-            TrucoDealer target = new TrucoDealer(); // TODO: Initialize to an appropriate value
-            ICardGame cardGame = null; // TODO: Initialize to an appropriate value
-            IDeck deck = null; // TODO: Initialize to an appropriate value
-            IPlayer player = null; // TODO: Initialize to an appropriate value
-            target.DistributeCardsToSinglePlayer(cardGame, deck, player);
-        }
 
         [TestMethod()]
         public void DistributeCardsTest()
@@ -60,7 +54,32 @@ namespace CardGameFrameworkTest
             ICardGame cardGame = null; // TODO: Initialize to an appropriate value
             IDeck deck = null; // TODO: Initialize to an appropriate value
             ICollection<IPlayer> players = null; // TODO: Initialize to an appropriate value
-            target.DistributeCards(cardGame, deck, players);
+//            target.DistributeCards(cardGame, deck, players);
+        }
+
+
+        [TestMethod()]
+        public void DistributeCardsToSinglePlayerTest()
+        {
+            TrucoDealer target = FakeTrucoDealer.CreateDealer();
+            TrucoDeck deck = new TrucoDeck();
+            TrucoPlayer player = FakeTrucoPlayer.createPlayer("Bob");
+            target.DistributeCardsToSinglePlayer(deck, player);
+            Assert.AreEqual(player.Hand.NumCards,3);
+        }
+
+        [TestMethod()]
+        public void DrawCardsIntoHandOfPlayerTest()
+        {
+            TrucoDealer target = FakeTrucoDealer.CreateDealer();
+            TrucoDeck deck = FakeTrucoDeck.CreateDeckOfSpadesInOrder();
+            TrucoPlayer player = FakeTrucoPlayer.createPlayer("Bob");
+            Hand actual = target.DrawCardsIntoHandOfPlayer(deck, player);
+            Hand expected = new Hand();
+            expected.Cards.Add(new Card(Suit.Spades, FaceValue.Ace));
+            expected.Cards.Add(new Card(Suit.Spades, FaceValue.Two));
+            expected.Cards.Add(new Card(Suit.Spades, FaceValue.Three));
+            Assert.AreEqual(expected.ToString(), actual.ToString()); // Implements Equals into Deck
         }
     }
 }

@@ -13,14 +13,14 @@ namespace CardGameFramework.Model.Player
             return new Card.Card(Suit.Clubs, FaceValue.Ace);
         }
 
-        public void DistributeCards(ICardGame cardGame, IDeck deck, ICollection<IPlayer> players)
+        public ICollection<Hand> DistributeCards(ICardGame cardGame, IDeck deck, ICollection<IPlayer> players)
         {
-            
+            return null;
         }
 
-        public void DistributeCardsToSinglePlayer(ICardGame cardGame, IDeck deck, IPlayer players)
+        public Hand DistributeCardsToSinglePlayer(ICardGame cardGame, IDeck deck, IPlayer players)
         {
-            throw new System.NotImplementedException();
+            return null;
         }
     }
 }

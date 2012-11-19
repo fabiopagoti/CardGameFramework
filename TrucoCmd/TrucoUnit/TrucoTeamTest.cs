@@ -185,6 +185,6 @@ namespace TrucoUnit
             bool actual = target.isPlayerFromTeam(trucoPlayer);
             Assert.AreEqual(true, actual);
         }
-
+        #endregion
     }
 }

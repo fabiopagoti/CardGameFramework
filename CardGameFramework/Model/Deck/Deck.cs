@@ -7,7 +7,7 @@ namespace CardGameFramework.Model.Deck
     public class Deck : IDeck
     {
         // Creates a list of cards
-        protected List<Card.Card> cards = new List<Card.Card>();
+        public List<Card.Card> cards = new List<Card.Card>();
 
         // Returns the card at the given position
         public Card.Card this[int position] { get { return (Card.Card)cards[position]; } }
