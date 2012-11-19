@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using CardGameFramework.Model.Card;
 
-namespace CardGameFramework
+namespace CardGameFramework.Model.Deck
 {
-    public class Deck
+    public class Deck : IDeck
     {
         // Creates a list of cards
-        protected List<Card> cards = new List<Card>();
+        public List<Card.Card> cards = new List<Card.Card>();
 
         // Returns the card at the given position
-        public Card this[int position] { get { return (Card)cards[position]; } }
+        public Card.Card this[int position] { get { return (Card.Card)cards[position]; } }
 
         /// <summary>
         /// One complete deck with every face value and suit
@@ -20,7 +21,7 @@ namespace CardGameFramework
             {
                 foreach (FaceValue faceVal in Enum.GetValues(typeof(FaceValue)))
                 {
-                    cards.Add(new Card(suit, faceVal, true));
+                    cards.Add(new Card.Card(suit, faceVal));
                 }
             }
         }
@@ -29,9 +30,9 @@ namespace CardGameFramework
         /// Draws one card and removes it from the deck
         /// </summary>
         /// <returns></returns>
-        public Card Draw()
+        public Card.Card Draw()
         {
-            Card card = cards[0];
+            Card.Card card = cards[0];
             cards.RemoveAt(0);
             return card;
         }
@@ -57,9 +58,15 @@ namespace CardGameFramework
         /// <param name="index2"></param>
         private void SwapCard(int index1, int index2)
         {
-            Card card = cards[index1];
+            Card.Card card = cards[index1];
             cards[index1] = cards[index2];
             cards[index2] = card;
+        }
+
+
+        public bool isCardVisible(Card.Card trump)
+        {
+            return false;
         }
     }
 }
