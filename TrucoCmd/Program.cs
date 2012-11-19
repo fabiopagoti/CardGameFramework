@@ -7,7 +7,7 @@ namespace TrucoCmd
 {
     internal class Program
     {
-
+        
         private static TrucoGame game = Mocks.FakeTrucoGame.createTrucoGame4Players();
         
         // settings
@@ -54,8 +54,6 @@ namespace TrucoCmd
                     
                     break;
             }
-
-      
         }
 
 
