@@ -21,7 +21,7 @@ namespace TrucoCmd
             WriteMenu();
 
             ConsoleKeyInfo opt = Console.ReadKey();
-            while (!opt.Equals(ConsoleKey.Q))
+            while (!opt.Key.Equals(ConsoleKey.Q))
             {
                 SelectOption(opt);
                 WriteMenu();
@@ -107,7 +107,7 @@ namespace TrucoCmd
             Console.WriteLine("\n1) Start a new Game\n" +
                               "2) Player Name\n" +
                               "3) Number of Players\n" +
-                              "Esq) Quit\n");
+                              "Q) Quit\n");
         }
 
 

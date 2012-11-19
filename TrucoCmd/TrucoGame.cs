@@ -1,4 +1,5 @@
-﻿using CardGameFramework.Model.Game;
+﻿using System;
+using CardGameFramework.Model.Game;
 using TrucoCmd.Mocks;
 
 namespace TrucoCmd
@@ -45,6 +46,8 @@ namespace TrucoCmd
         {
             Score = FakeTrucoScore.createTrucoScore(0, 0);
         }
+
+ 
 
     }
 }
